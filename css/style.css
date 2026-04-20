@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #1a1a2e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.sidebar .logo h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.side_nav ul {
+    list-style: none;
+}
+
+.side_nav ul li {
+    margin-bottom: 15px;
+}
+
+.side_nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.side_footer {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.right {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    display: flex;
+    flex-direction: column;
+}
+
+.top_nav {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    width: calc(100% - 220px);
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.hero {
+    background-color: #1a1a2e;
+    color: white;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero_text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero_text p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #e94560;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.hero_image img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.page_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.galerie_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galerie_item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.contact_form input,
+.contact_form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.contact_form textarea {
+    height: 150px;
+    resize: none;
+}
