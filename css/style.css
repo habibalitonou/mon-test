@@ -12,15 +12,16 @@ body {
 .container {
     display: flex;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .sidebar {
+    flex-shrink: 0;
     width: 220px;
     height: 100vh;
     background-color: #1a1a2e;
-    position: fixed;
-    top: 0;
-    left: 0;
+   align-items: center;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -53,17 +54,18 @@ body {
 }
 
 .right {
-    margin-left: 220px;
-    width: calc(100% - 220px);
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   height: 100vh;
+   overflow: hidden;
 }
 
 .top_nav {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 220px;
-    width: calc(100% - 220px);
+    width: auto;;
+    flex-shrink: 0;
     height: 60px;
     background-color: white;
     display: flex;
@@ -71,6 +73,12 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+.nav_input{
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .avatar {
@@ -82,8 +90,10 @@ body {
 }
 
 main {
-    margin-top: 60px;
+    flex: 1;
     padding: 20px;
+    overflow: auto;
+    background-color: #f4f7fe;
 }
 
 .hero {
@@ -94,6 +104,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 300px;
+    width: auto;
 }
 
 .hero_text h1 {
@@ -158,4 +170,10 @@ main {
 .contact_form textarea {
     height: 150px;
     resize: none;
+}
+main{
+    overflow-y: auto;
+}
+.heroo p{
+    font-size: 20px;
 }
